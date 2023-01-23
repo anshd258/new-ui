@@ -35,7 +35,11 @@ class _FeedState extends State<Feed> {
 
     List<dataClass> postList = []; //countries
     for (var i in jsonArray) {
-      dataClass data = dataClass(title: i['title']); //country
+      dataClass data = dataClass(
+          title: i['title'],
+          author: i['author'],3
+          description: i['description'],
+          mediaslug: i['mediaslug']); //country
       postList.add(data);
     }
     print(postList);
